@@ -1,0 +1,16 @@
+{
+  "running": 9.0,
+  "walking": 4.5,
+  "jogging": 7.0,
+  "swimming": 9.8,
+  "soccer": 10.3,
+  "football": 10.3,
+  "cricket": 6.05,
+  "basketball": 8.0,
+  "yoga": 3.3,
+  "tennis": 7.3,
+  "weights": 6.0,
+  "cycling": 7.0,
+  "zumba": 6.0,
+  "rock climbing": 7.5
+}
