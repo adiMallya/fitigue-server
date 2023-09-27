@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Sandwich",
+    "carbs": 0.69,
+    "proteins": 18,
+    "fats": 3.5,
+    "user": "5d7a514b5d2c12c7449be045"
+  },
+  {
+    "name": "Beer",
+    "carbs": 12.64,
+    "proteins": 1.64,
+    "fats": 0,
+    "user": "5d7a514b5d2c12c7449be045"
+  },
+  {
+    "name": "Tofu",
+    "carbs": 2.72,
+    "proteins": 7.82,
+    "fats": 3.06,
+    "user": "5d7a514b5d2c12c7449be046"
+  },
+  {
+    "name": "Veg Pizza",
+    "carbs": 33.98,
+    "proteins": 13.32,
+    "fats": 12.13,
+    "user": "5d7a514b5d2c12c7449be045"
+  },
+  {
+    "name": "Caesar salad",
+    "carbs": 21.12,
+    "proteins": 16.3,
+    "fats": 45.91,
+    "user": "5d7a514b5d2c12c7449be046"
+  },
+  {
+    "name": "Beer",
+    "carbs": 12.64,
+    "proteins": 1.64,
+    "fats": 0,
+    "user": "5d7a514b5d2c12c7449be046"
+  },
+  {
+    "name": "Chicken Pizza",
+    "carbs": 33.98,
+    "proteins": 29.32,
+    "fats": 13.97,
+    "user": "5c8a1d5b0190b214360dc033"
+  },
+  {
+    "name": "Ghee Rice",
+    "carbs": 44.08,
+    "proteins": 4.2,
+    "fats": 0.66,
+    "user": "5c8a1d5b0190b214360dc033"
+  },
+  {
+    "name": "Cheese Burger",
+    "carbs": 31.75,
+    "proteins": 14.77,
+    "fats": 15.15,
+    "user": "5c8a1d5b0190b214360dc034"
+  },
+  {
+    "name": "Beer",
+    "carbs": 12.64,
+    "proteins": 1.64,
+    "fats": 0,
+    "user": "5c8a1d5b0190b214360dc034"
+  },
+  {
+    "name": "Chicken Pizza",
+    "carbs": 33.98,
+    "proteins": 29.32,
+    "fats": 13.97,
+    "user": "5c8a1d5b0190b214360dc034"
+  },
+  {
+    "name": "Caesar salad",
+    "carbs": 21.12,
+    "proteins": 16.3,
+    "fats": 45.91,
+    "user": "5c8a1d5b0190b214360dc035"
+  },
+  {
+    "name": "Beer",
+    "carbs": 12.64,
+    "proteins": 1.64,
+    "fats": 0,
+    "user": "5c8a1d5b0190b214360dc035"
+  }
+]

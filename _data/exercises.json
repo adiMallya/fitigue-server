@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Yoga",
+    "duration": 60,
+    "user": "5d7a514b5d2c12c7449be045"
+  },
+  {
+    "name": "Jogging",
+    "duration": 45,
+    "user": "5d7a514b5d2c12c7449be045"
+  },
+  {
+    "name": "Tennis",
+    "duration": 50,
+    "user": "5d7a514b5d2c12c7449be046"
+  },
+  {
+    "name": "Running",
+    "duration": 60,
+    "user": "5d7a514b5d2c12c7449be045"
+  },
+  {
+    "name": "Running",
+    "duration": 20,
+    "user": "5d7a514b5d2c12c7449be046"
+  },
+  {
+    "name": "Walking",
+    "duration": 50,
+    "user": "5d7a514b5d2c12c7449be046"
+  },
+  {
+    "name": "Cycling",
+    "duration": 120,
+    "user": "5c8a1d5b0190b214360dc033"
+  },
+  {
+    "name": "Weights",
+    "duration": 20,
+    "user": "5c8a1d5b0190b214360dc033"
+  },
+  {
+    "name": "Football",
+    "duration": 45,
+    "user": "5c8a1d5b0190b214360dc034"
+  },
+  {
+    "name": "Basketball",
+    "duration": 50,
+    "user": "5c8a1d5b0190b214360dc034"
+  },
+  {
+    "name": "Walking",
+    "duration": 50,
+    "user": "5c8a1d5b0190b214360dc034"
+  },
+  {
+    "name": "Weights",
+    "duration": 70,
+    "user": "5c8a1d5b0190b214360dc035"
+  },
+  {
+    "name": "Yoga",
+    "duration": 50,
+    "user": "5c8a1d5b0190b214360dc035"
+  }
+]
