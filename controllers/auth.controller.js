@@ -43,6 +43,36 @@ exports.login = async (email, password) => {
   }
 }
 
+exports.getMe = async (userId) => {
+  try {
+     const user = await User.findById(userId);
+  
+    if(!user){
+      throw new ErrorResponse('Not Authorized.', 401);
+    }
+
+    return user; 
+  }  catch(error){
+    throw error;
+  }
+}
+
+exports.updateDetails = async (userId, fieldsToUpdate) => {
+  try {
+    const user = await User.findByIdAndUpdate(userId, fieldsToUpdate, {
+      new: true,
+      runValidators: true
+    });
+  
+    if(!user){
+      throw new ErrorResponse('Not Authorized.', 401);
+    }
+  
+    return user; 
+  } catch(error){
+    throw error;
+  }
+}
 // Fetch token from model and send response
 exports.sendTokenResponse = (user, statusCode, res) => {
     // Create JWT token

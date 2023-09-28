@@ -1,5 +1,6 @@
 const express = require('express');
-const { signUp, login, sendTokenResponse } = require('../controllers/auth.controller');
+const { signUp, login, sendTokenResponse, getMe, updateDetails } = require('../controllers/auth.controller');
+const { protect } = require('../middlewares/auth.middleware');
 
 const router = express.Router();
 
@@ -31,5 +32,37 @@ router.post('/login', async (req, res, next) => {
     next(error);
   }
 })
+
+// @desc : Get current user
+// @route : GET /api/v1/auth/me
+// @access : Protected
+router.get('/me', protect, async (req, res, next) => {
+  try{
+    const user = await getMe(req.user.id);
+
+    res.status(200).json({
+      success: true,
+      data: user
+    });
+  }catch(error){
+    next(error);
+  }
+});
+
+// @desc : Update current user details
+// @route : POST /api/v1/auth/updateDetails
+// @access : Protected
+router.post('/updateDetails', protect, async (req, res, next) => {
+  try{
+    const user = await updateDetails(req.user.id, req.body);
+
+    res.status(200).json({
+      success: true,
+      data: user
+    });
+  }catch(error){
+    next(error);
+  }
+});
 
 module.exports = router;
