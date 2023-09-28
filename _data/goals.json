@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Run 2km everyday",
+    "description": "Try to run 2km a day, or somehow hit a target of 1050 kcal.",
+    "targetDate": "2023-10-10",
+    "targetCalories": 1050,
+    "status": "In Progress",
+    "user": "5d7a514b5d2c12c7449be045"
+  },
+  {
+    "name": "Early Morning Yoga",
+    "description": "Surya namaskar, asanas and breathing.",
+    "targetDate": "2023-10-02",
+    "targetCalories": 6000,
+    "status": "Acheived",
+    "user": "5d7a514b5d2c12c7449be046"
+  },
+  {
+    "name": "Keep diet healthy.",
+    "description": "4-4-9 macro balance.",
+    "targetDate": "2023-10-20",
+    "targetCalories": 7500,
+    "status": "Abandoned",
+    "user": "5d7a514b5d2c12c7449be046"
+  },
+  {
+    "name": "Run 2km everyday",
+    "description": "Try to run 2km a day, or somehow hit a target of 1050 kcal.",
+    "targetDate": "2023-10-01",
+    "targetCalories": 1050,
+    "status": "Acheived",
+    "user": "5d7a514b5d2c12c7449be046"
+  },
+  {
+    "name": "Early Morning Yoga",
+    "description": "Surya namaskar, asanas and breathing.",
+    "targetDate": "2023-10-02",
+    "targetCalories": 6000,
+    "status": "Acheived",
+    "user": "5c8a1d5b0190b214360dc033"
+  },
+  {
+    "name": "Run 2km everyday",
+    "description": "Try to run 2km a day, or somehow hit a target of 1050 kcal.",
+    "targetDate": "2023-10-15",
+    "targetCalories": 1345,
+    "status": "In Progress",
+    "user": "5c8a1d5b0190b214360dc034"
+  },
+  {
+    "name": "Keep diet healthy.",
+    "description": "4-4-9 macro balance.",
+    "targetDate": "2023-10-20",
+    "targetCalories": 9500,
+    "status": "In Progress",
+    "user": "5c8a1d5b0190b214360dc033"
+  },
+  {
+    "name": "Bicycling 42km a day",
+    "description": "Explore new routes and hit speeds.",
+    "targetDate": "2023-10-04",
+    "targetCalories": 17000,
+    "status": "Abandoned",
+    "user": "5c8a1d5b0190b214360dc034"
+  },
+  {
+    "name": "Weight Training goal",
+    "description": "Deadlifts and Bench.",
+    "targetDate": "2023-10-06",
+    "targetCalories": 12000,
+    "status": "In Progress",
+    "user": "5c8a1d5b0190b214360dc035"
+  },
+  {
+    "name": "Early Morning Yoga",
+    "description": "Surya namaskar, asanas and breathing.",
+    "targetDate": "2023-10-02",
+    "targetCalories": 6000,
+    "status": "Acheived",
+    "user": "5c8a1d5b0190b214360dc035"
+  }
+]
