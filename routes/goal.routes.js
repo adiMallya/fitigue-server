@@ -1,5 +1,5 @@
 const express = require('express');
-const { getUserGoals, createGoalForUser, deleteUserGoal } = require('../controllers/goal.controller');
+const { getUserGoals, createGoalForUser, deleteUserGoal, updateGoalStatus } = require('../controllers/goal.controller');
 const { protect } = require('../middlewares/auth.middleware');
 
 const router = express.Router();
@@ -46,6 +46,22 @@ router.delete('/:goalId', protect, async (req, res, next) => {
     res.status(204).json({
       success: true,
       data: {}
+    });
+  }catch(error){
+    next(error);
+  }
+});
+
+// @desc : Update a user's goal status
+// @route : POST /api/v1/goals/:goalId
+// @access : Private
+router.post('/:goalId', protect, async (req, res, next) => {
+  try{
+    const goal = await updateGoalStatus(req.user.id, req.params.goalId, req.query.status);
+
+    res.status(200).json({
+      success: true,
+      data: goal
     });
   }catch(error){
     next(error);

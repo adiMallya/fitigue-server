@@ -50,3 +50,24 @@ exports.deleteUserGoal = async (userId, goalId) => {
     throw error;
   }
 }
+
+exports.updateGoalStatus = async (userId, goalId, status) => {
+  try{
+    const goal = await Goal.findByIdAndUpdate(goalId, { status }, {
+      new: true,
+      runValidators: true
+    });
+
+    if(status === 'Abandoned'){
+     //Update total calorie goal for the user(decrement)
+      await User.updateOne(
+        { _id: goal.user },
+        { $inc: { totalCalorieGoal : -goal.targetCalories } }
+      ); 
+    }
+
+    return goal;
+  }catch(error){
+    throw error;
+  }
+}
