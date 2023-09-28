@@ -12,6 +12,7 @@ connectDb();
 
 //Routes
 const auth = require('./routes/auth.routes');
+const exercise = require('./routes/exercise.routes');
 
 const app = express();
 //Body parser
@@ -35,6 +36,7 @@ app.get('/', (req, res) => {
   res.send('<h1>Welcome To Fitigue</h1>')
 });
 app.use('/api/v1/auth', auth);
+app.use('/api/v1/exercises', exercise);
 //Error Handling
 app.use(errorHandler);
 

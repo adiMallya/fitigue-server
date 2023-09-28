@@ -45,13 +45,7 @@ exports.login = async (email, password) => {
 
 exports.getMe = async (userId) => {
   try {
-     const user = await User.findById(userId);
-  
-    if(!user){
-      throw new ErrorResponse('Not Authorized.', 401);
-    }
-
-    return user; 
+    return await User.findById(userId);; 
   }  catch(error){
     throw error;
   }
@@ -63,10 +57,6 @@ exports.updateDetails = async (userId, fieldsToUpdate) => {
       new: true,
       runValidators: true
     });
-  
-    if(!user){
-      throw new ErrorResponse('Not Authorized.', 401);
-    }
   
     return user; 
   } catch(error){
