@@ -14,6 +14,7 @@ connectDb();
 const auth = require('./routes/auth.routes');
 const exercise = require('./routes/exercise.routes');
 const food = require('./routes/food.routes');
+const goal = require('./routes/goal.routes');
 
 const app = express();
 //Body parser
@@ -39,6 +40,8 @@ app.get('/', (req, res) => {
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/exercises', exercise);
 app.use('/api/v1/food', food);
+app.use('/api/v1/goals', goal);
+
 //Error Handling
 app.use(errorHandler);
 
