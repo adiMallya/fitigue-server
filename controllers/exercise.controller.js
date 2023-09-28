@@ -40,6 +40,12 @@ exports.deleteUserExercise = async (userId, exerciseId) => {
     }
     
     exercise.deleteOne();
+
+    //Update total calorie burned for the user(decrement)
+    await User.updateOne(
+      { _id: exercise.user },
+      { $inc: { totalCaloriesBurned : -exercise.calories } }
+    );
   }catch(error){
     throw error;
   }
