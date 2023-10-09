@@ -4,7 +4,7 @@ const User = require('../models/User');
 
 exports.getUserGoals = async (userId) => {
   try{
-    return await Goal.find({ user: userId });
+    return await Goal.find({ user: userId }).sort({ updatedAt: -1});
   }catch(error){
     throw error;
   }
@@ -21,7 +21,7 @@ exports.createGoalForUser = async (userId, goalData) => {
       { $inc: { totalCalorieGoal : newGoal.targetCalories } }
     );
 
-    return await Goal.find({ user: userId });;
+    return await Goal.find({ user: userId }).sort({ updatedAt: -1});
   }catch(error){
     throw error;
   }
@@ -66,7 +66,7 @@ exports.updateGoalStatus = async (userId, goalId, status) => {
       ); 
     }
 
-    return goal;
+    return await Goal.find({ user: userId }).sort({ updatedAt: -1});
   }catch(error){
     throw error;
   }

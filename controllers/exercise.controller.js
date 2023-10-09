@@ -4,7 +4,7 @@ const User = require('../models/User');
 
 exports.getExercisesForUser = async (userId) => {
   try{
-    return await Exercise.find({ user: userId });
+    return await Exercise.find({ user: userId }).sort({ updatedAt: -1});
   }catch(error){
     throw error;
   }
@@ -12,6 +12,10 @@ exports.getExercisesForUser = async (userId) => {
 
 exports.createExerciseForUser = async (userId, exerciseData) => {
   try{
+    if(!exerciseData){
+      throw new ErrorResponse('', 400);  
+    }
+    
     const exercise = new Exercise({ ...exerciseData, user: userId });
     const newExercise = await exercise.save();
 
@@ -21,7 +25,7 @@ exports.createExerciseForUser = async (userId, exerciseData) => {
       { $inc: { totalCaloriesBurned : newExercise.calories } }
     );
 
-    return await Exercise.find({ user: userId });;
+    return await Exercise.find({ user: userId }).sort({ updatedAt: -1});
   }catch(error){
     throw error;
   }

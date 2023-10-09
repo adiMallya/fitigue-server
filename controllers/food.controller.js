@@ -4,7 +4,7 @@ const User = require('../models/User');
 
 exports.getFoodForUser = async (userId) => {
   try{
-    return await Food.find({ user: userId });
+    return await Food.find({ user: userId }).sort({ updatedAt: -1});
   }catch(error){
     throw error;
   }
@@ -21,7 +21,7 @@ exports.createFoodForUser = async (userId, foodData) => {
       { $inc: { totalCaloriesConsumed : newFood.calories } }
     );
 
-    return await Food.find({ user: userId });;
+    return await Food.find({ user: userId }).sort({ updatedAt: -1});
   }catch(error){
     throw error;
   }
