@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const GoalSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: [true, "Please add a title"]
   },
   description: {
     type: String,
-    required: true
+    required: [true, "Description missing"]
   },
   targetDate: {
     type: Date,
