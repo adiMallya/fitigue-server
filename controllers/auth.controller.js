@@ -21,7 +21,7 @@ exports.signUp = async (userDetail) => {
 exports.login = async (email, password) => {
   try {
     if (!email || !password) {
-        throw new ErrorResponse('Please provide an email and password');
+        throw new ErrorResponse('Please provide an email and password', 400);
     }
 
     //Check user
