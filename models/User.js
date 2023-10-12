@@ -16,7 +16,7 @@ const UserSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, "Please add an email"],
-    unique: true,
+    unique: [true, "Email is already registered"],
     lowercase: true,
     match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
   },
@@ -29,7 +29,7 @@ const UserSchema = new mongoose.Schema({
   username: {
     type: String,
     required: [true, "Please use a unique username."],
-    unique: true,
+    unique: [true, "Username already exists"],
     trim: true,
   },
   bio: {
@@ -74,24 +74,24 @@ const UserSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 // Encrypt password using bcrypt
-UserSchema.pre('save', async function (next) {
-    if (!this.isModified('password')) {
-        next();
-    }
-
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt);
+UserSchema.pre('save', async function(next) {
+  if (!this.isModified('password')) {
     next();
+  }
+
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
 });
 // Sign a JWT and return
-UserSchema.methods.getSignedJwtToken = function () {
-    return jwt.sign({ id: this._id }, process.env['JWT_SECRET'], {
-        expiresIn: process.env['JWT_EXPIRE']
-    });
+UserSchema.methods.getSignedJwtToken = function() {
+  return jwt.sign({ id: this._id }, process.env['JWT_SECRET'], {
+    expiresIn: process.env['JWT_EXPIRE']
+  });
 }
 // Match user given password to hashed password in databse
-UserSchema.methods.matchPassword = async function (enteredPassword) {
-    return await bcrypt.compare(enteredPassword, this.password);
+UserSchema.methods.matchPassword = async function(enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
 };
 
 module.exports = mongoose.model('User', UserSchema);
