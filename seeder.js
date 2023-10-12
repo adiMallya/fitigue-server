@@ -1,6 +1,6 @@
 const fs = require('fs');
 const mongoose = require('mongoose');
-const connectDatabase = require('./config/db');
+const connectDb = require('./config/db');
 
 const User = require('./models/User');
 const Exercise = require('./models/Exercise');
@@ -8,7 +8,7 @@ const Food = require('./models/Food');
 const Goal = require('./models/Goal');
 
 //Connect to DB
-connectDatabase();
+connectDb();
 
 //Read data from files
 const usersData = JSON.parse(fs.readFileSync('./_data/users.json', 'utf-8'));
